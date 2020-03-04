@@ -1,16 +1,18 @@
 <template>
   <view>
-    <text>test</text>
-    <footer></footer>
+    <Navbar />
+    <footer />
   </view>
 </template>
 
 <script>
-import Footer from '../components/Footer';
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
 export default {
-    components: {
-        Footer
-    }
-}
+  components: {
+    Footer,
+    Navbar
+  }
+};
 </script>
