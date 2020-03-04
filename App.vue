@@ -5,7 +5,11 @@
 </template>
 
 <script>
-import Layout from './src/layout/Layout'
+import Layout from './src/layout/Layout';
+import Vue from 'vue-native-core';
+import { VueNativeBase } from "native-base";
+Vue.use(VueNativeBase);
+
 export default {
   components: {
     Layout
