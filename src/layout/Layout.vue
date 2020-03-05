@@ -1,8 +1,8 @@
 <template>
-  <view>
+  <nb-container>
     <Navbar />
-    <footer />
-  </view>
+    <Footer />
+  </nb-container>
 </template>
 
 <script>
