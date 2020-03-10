@@ -1,7 +1,7 @@
 <template>
-    <root>
-         <app-navigation></app-navigation>
-    </root>
+  <root>
+    <app-navigation></app-navigation>
+  </root>
 </template>
 
 <script>
@@ -11,10 +11,36 @@ import {
   createDrawerNavigator
 } from "vue-native-router";
 import { Root } from "native-base";
+import Navbar from "./components/Navbar";
+import SideBar from "./components/Drawer";
+import TestScreen from "./components/test";
 
-import Toto from "./components/test";
-const Drawer = createDrawerNavigator({
-  Home: { screen: Toto }
-});
-export default {};
+const Drawer = createDrawerNavigator(
+  {
+    Home: { screen: Navbar },
+    Test: { screen: TestScreen }
+  },
+  {
+    initialRouteName: "Home",
+    contentOptions: {
+      activeTintColor: "#e91e63"
+    },
+    contentComponent: SideBar
+  }
+);
+
+const AppNavigation = createAppContainer(
+  createStackNavigator(
+    {
+      Drawer: { screen: Drawer }
+    },
+    {
+      initialRouteName: "Drawer",
+      headerMode: "none"
+    }
+  )
+);
+export default {
+    components: { Root, AppNavigation }
+};
 </script>

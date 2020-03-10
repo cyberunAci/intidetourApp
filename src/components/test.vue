@@ -1,5 +1,7 @@
 <template>
     <nb-container>
-        <nb-text>test</nb-text>
+        <nb-text>
+            toto
+        </nb-text>
     </nb-container>
 </template>
