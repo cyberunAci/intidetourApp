@@ -1,16 +1,17 @@
 <template>
   <nb-header>
     <nb-left>
-      <nb-button transparent>
+      <nb-button transparent button :onPress="change">
         <nb-icon name="menu" />
       </nb-button>
     </nb-left>
     <nb-body>
-      <nb-title>InZeTour</nb-title>
+      <nb-title>{{ toto }}</nb-title>
     </nb-body>
   </nb-header>
 </template>
 <script>
+import Draweer from "./Drawer";
 import {
   Container,
   Header,
@@ -19,9 +20,15 @@ import {
   Right,
   Button,
   Icon,
-  Title
+  Title,
+  Picker
 } from "native-base";
 export default {
+  props: {
+    navigation: {
+      type: Object
+    }
+  },
   components: {
     Container,
     Header,
@@ -30,7 +37,28 @@ export default {
     Right,
     Button,
     Icon,
-    Title
+    Title,
+    Draweer,
+    Item: Picker.Item
+  },
+  data: function() {
+    return {
+      toto: "toto est où ?",
+      selected: ""
+    };
+  },
+  methods: {
+    change: function() {
+      // if (this.toto == "toto est où ?") {
+      //   this.toto = "il est là";
+      // } else if (this.toto == "il est là") {
+      //   this.toto = "toto est où ?";
+      // }
+      this.navigation.openDrawer();
+    },
+    onValueChange: function(value) {
+      this.selected = value;
+    }
   }
 };
 </script>
