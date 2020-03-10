@@ -14,11 +14,13 @@ import { Root } from "native-base";
 import Navbar from "./components/Navbar";
 import SideBar from "./components/Drawer";
 import TestScreen from "./components/test";
+import ContentScreen from "./layout/Content";
 
 const Drawer = createDrawerNavigator(
   {
     Home: { screen: Navbar },
-    Test: { screen: TestScreen }
+    Test: { screen: TestScreen },
+    Content:{screen:ContentScreen}
   },
   {
     initialRouteName: "Home",

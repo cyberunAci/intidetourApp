@@ -69,17 +69,18 @@ export default {
       },
       datas: [
         {
+          name: "Accueil",
+          route: "Content",
+          icon: "home",
+          bg: "#C5F442"
+        },
+        {
           name: "Test",
           route: "Test",
           icon: "phone-portrait",
           bg: "#C5F442"
         },
-        {
-          name: "Actionsheet",
-          route: "Actionsheet",
-          icon: "easel",
-          bg: "#C5F442"
-        },
+        
 
       ]
     };
