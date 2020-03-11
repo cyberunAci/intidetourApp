@@ -17,14 +17,14 @@ import Navbar from "./components/Navbar";
 import SideBar from "./components/Drawer";
 import TestScreen from "./components/test";
 import ContentScreen from "./layout/Content";
-import LayoutScreen from "./layout/Layout";
 
 
 const Drawer = createDrawerNavigator(
   {
-    Home: { screen: LayoutScreen },
+    Home: { screen: ContentScreen },
     Test: { screen: TestScreen },
     Content: { screen: ContentScreen },
+
     Navbar: { screen: Navbar }
   },
   {
@@ -41,7 +41,7 @@ const AppNavigation = createAppContainer(
     {
       Drawer: Drawer ,    
       Details: TestScreen,
-      Home: LayoutScreen
+      Home: ContentScreen
 
       
     },

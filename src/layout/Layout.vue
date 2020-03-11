@@ -1,6 +1,5 @@
 <template>
   <nb-container>
-    <Navbar :navigation="navigation"/>
       <content />
     <Footer />
   </nb-container>
