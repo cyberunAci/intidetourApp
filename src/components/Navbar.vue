@@ -1,11 +1,9 @@
 <template>
   <nb-header>
     <nb-left>
-       <nb-button  transparent button 
-          :onPress="menuSideBar"
-        >
+      <nb-button transparent :onPress="() => this.props.navigation.openDrawer()">
         <nb-icon name="menu" />
-        </nb-button>
+      </nb-button>
     </nb-left>
     <nb-body>
       <nb-title>{{ toto }}</nb-title>
@@ -32,8 +30,7 @@ export default {
     },
     onValueChange: function(value) {
       this.selected = value;
-    },
-
+    }
   }
 };
 </script>

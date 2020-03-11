@@ -1,7 +1,7 @@
 <template>
   <nb-container>
-    <nb-header />
     <nb-content>
+      <nb-text> alqquaida</nb-text>
     </nb-content>
   </nb-container>
 </template>
