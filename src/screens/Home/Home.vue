@@ -6,7 +6,7 @@
             <nb-left>
               <nb-thumbnail :source="logo"></nb-thumbnail>
               <nb-body>
-                <nb-text :style="{ alignSelf:'center', fontSize:20}">IntiDetour</nb-text>
+                <nb-text :style="{ alignSelf:'center', fontSize:25}">IntiDetour</nb-text>
               </nb-body>
             </nb-left>
           </nb-card-item>
@@ -16,19 +16,7 @@
               <nb-text>//Your text here</nb-text>
             </nb-body>
           </nb-card-item>
-          <nb-card-item :style="{ paddingVertical: 0 }">
-            <nb-left>
-              <nb-button iconLeft sucess>
-                <nb-icon active name="logo-android" />
-                <nb-text>Télécharger sur Google Play</nb-text>
-              </nb-button>
-            </nb-left>
-            <nb-right>
-              <nb-button iconLeft blue>
-                <nb-icon active name="logo-apple" />
-                <nb-text>Télécharger sur l'App Store</nb-text>
-              </nb-button>
-            </nb-right>
+          <nb-card-item>
           </nb-card-item>
         </nb-card>
       </nb-content>
@@ -50,7 +38,15 @@ export default {
         cardItemImage: {
           resizeMode: "cover",
           width: deviceWidth / 1.18
-        }
+        },
+       /*  buttonAndroid:{
+                  borderRadius: 35,
+                  marginRight:50,
+        }, */
+        /* buttonApple:{
+                  borderRadius: 35,
+                  marginLeft: 15,
+        } */
       }
     };
   }
