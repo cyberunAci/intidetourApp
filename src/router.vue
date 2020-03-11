@@ -15,14 +15,13 @@ import {
 import { Root } from "native-base";
 import Navbar from "./components/Navbar";
 import SideBar from "./components/Drawer";
-import TestScreen from "./components/test";
+import AproposScreen from "./components/apropos";
 import ContentScreen from "./layout/Content";
-
 
 const Drawer = createDrawerNavigator(
   {
     Home: { screen: ContentScreen },
-    Test: { screen: TestScreen },
+    Apropos: { screen: AproposScreen },
     Content: { screen: ContentScreen },
 
     Navbar: { screen: Navbar }
@@ -40,7 +39,7 @@ const AppNavigation = createAppContainer(
   createStackNavigator(
     {
       Drawer: Drawer ,    
-      Details: TestScreen,
+      Apropos: AproposScreen,
       Home: ContentScreen
 
       
