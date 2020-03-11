@@ -2,7 +2,7 @@
   <nb-container>
     <nb-container>
       <navbar :navigation="navigation" />
-      <nb-title> À propos </nb-title>
+      <nb-text> {{ titre }} </nb-text>
       <text v-for="(apropo,key) in apropos" :key="key">{{ apropo.text }}</text>
     </nb-container>
     <Footer />
@@ -25,6 +25,7 @@ export default {
   },
   data() {
     return {
+      titre: "À propos",
       apropos: []
     };
   },

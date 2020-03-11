@@ -75,7 +75,7 @@ export default {
           bg: "#C5F442"
         },
         {
-          name: "Apropos",
+          name: "À propos",
           route: "Apropos",
           icon: "phone-portrait",
           bg: "#C5F442"
