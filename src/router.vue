@@ -18,8 +18,8 @@ import ContentScreen from "./layout/Content";
 
 const Drawer = createDrawerNavigator(
   {
-    Home: { screen: Navbar },
-    Test: { screen: TestScreen },
+    Home: { screen: Navbar},
+    Test: { screen: TestScreen},
     Content:{screen:ContentScreen}
   },
   {

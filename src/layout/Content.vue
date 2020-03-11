@@ -1,24 +1,27 @@
 <template>
   <nb-container>
-    <nb-header />
+    <nb-container>
+          <navbar :navigation="navigation" />
     <nb-content>
+      <home></home>
     </nb-content>
+    </nb-container>
+
   </nb-container>
 </template>
 <script>
-import React from "react";
-import { Picker } from "native-base";
+import Home from "../screens/Home/Home";
+import Navbar from "../components/Navbar";
+
 export default {
-  components: { Item: Picker.Item },
-  data: function() {
-    return {
-      selected: ""
-    };
+  components:{
+    Home,
+    Navbar,
   },
-  methods: {
-    onValueChange: function(value) {
-      this.selected = value;
-    },
-  }
+   props: {
+    navigation: {
+      type: Object
+    }
+  },
 };
 </script>
