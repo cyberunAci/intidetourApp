@@ -1,6 +1,8 @@
 <template>
   <root>
-    <app-navigation></app-navigation>
+
+    <app-navigation>
+    </app-navigation>
   </root>
 </template>
 
@@ -15,12 +17,15 @@ import Navbar from "./components/Navbar";
 import SideBar from "./components/Drawer";
 import TestScreen from "./components/test";
 import ContentScreen from "./layout/Content";
+import LayoutScreen from "./layout/Layout";
+
 
 const Drawer = createDrawerNavigator(
   {
-    Home: { screen: Navbar},
-    Test: { screen: TestScreen},
-    Content:{screen:ContentScreen}
+    Home: { screen: LayoutScreen },
+    Test: { screen: TestScreen },
+    Content: { screen: ContentScreen },
+    Navbar: { screen: Navbar }
   },
   {
     initialRouteName: "Home",
@@ -34,7 +39,11 @@ const Drawer = createDrawerNavigator(
 const AppNavigation = createAppContainer(
   createStackNavigator(
     {
-      Drawer: { screen: Drawer }
+      Drawer: Drawer ,    
+      Details: TestScreen,
+      Home: LayoutScreen
+
+      
     },
     {
       initialRouteName: "Drawer",
@@ -43,6 +52,11 @@ const AppNavigation = createAppContainer(
   )
 );
 export default {
-    components: { Root, AppNavigation }
+  components: { Root, AppNavigation, Navbar},
+  props: {
+    navigation: {
+      type: Object
+    }
+  },
 };
 </script>

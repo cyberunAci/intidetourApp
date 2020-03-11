@@ -1,6 +1,6 @@
 <template>
   <nb-container>
-    <Navbar />
+    <Navbar :navigation="navigation"/>
       <content />
     <Footer />
   </nb-container>
@@ -12,6 +12,11 @@ import Footer from "./Footer";
 import Navbar from "../components/Navbar";
 
 export default {
+  props: {
+    navigation: {
+      type: Object
+    }
+  },
   components: {
     Footer,
     Navbar,
